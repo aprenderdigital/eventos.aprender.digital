@@ -8347,7 +8347,7 @@ a {
     .hero-summary .summary-heading .desc {
       font-size: 1rem;
       font-weight: normal; } }
-@media (max-width: 375.98px) {
+@media (max-width: 350.98px) {
   .hero-summary .summary-heading {
     font-size: 1.125rem; }
     .hero-summary .summary-heading .desc {
