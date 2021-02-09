@@ -8345,17 +8345,14 @@ a {
   .hero-summary .summary-heading {
     font-size: 1.125rem; }
     .hero-summary .summary-heading .desc {
+      font-size: 1rem;
+      font-weight: normal; } }
+@media (max-width: 375.98px) {
+  .hero-summary .summary-heading {
+    font-size: 1.125rem; }
+    .hero-summary .summary-heading .desc {
       font-size: 0.75rem;
-      font-weight: normal; }
-
-  .section-title {
-    font-size: 1.75rem; }
-
-  .column-list {
-    columns: 1; }
-
-  .review-item {
-    height: auto; } }
+      font-weight: normal; } }
 /* ======= Configure Style (Remove in production) ======= */
 /* Demo theme colour variables */
 body {

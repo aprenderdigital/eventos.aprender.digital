@@ -13,6 +13,8 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {  }
 
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
@@ -91,24 +93,22 @@
 	.hero-summary .summary-heading {
 		font-size: 1.125rem;
 		.desc {
+			font-size: 1rem;
+			font-weight: normal;
+		}
+	}
+}
+
+@media (max-width: 375.98px) {
+	.hero-summary .summary-heading {
+		font-size: 1.125rem;
+		.desc {
 			font-size: 0.75rem;
 			font-weight: normal;
 		}
 	}
-	.section-title {
-		font-size: 1.75rem;
-	}
-	.column-list {
-		columns: 1;
-		
-	}
-	.review-item {
-		height: auto;
-	}
-}
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
+}
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
