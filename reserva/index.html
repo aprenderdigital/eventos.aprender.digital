@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Inscrição</title>
+	<meta property="og:title" content="Workshop - A Importância do Nome na Alfabetização">
+	<meta property="og:description" content="Neste workshop você vai conhecer como surgiu a proposta de uso do nome próprio como base do processo de alfabetização. Também vai conhecer exemplos de atividades pedagógicas usando o nome próprio.">
+	<meta property="og:image" content="https://eventos.aprender.digital/workshop-nome-alfabetizacao/thumb2.jpg">
+	<meta property="og:url" content="https://eventos.aprender.digital/workshop-nome-alfabetizacao/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-E956YK3XT4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-E956YK3XT4');
+	</script>
+
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css" />
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+	<script>
+		var query = location.search.slice(1);
+		var partes = query.split("&");
+		var data = {};
+		partes.forEach(function (parte) {
+			var chaveValor = parte.split("=");
+			var chave = chaveValor[0];
+			var valor = chaveValor[1];
+			data[chave] = valor;
+		});
+		console.log(data);
+		if (typeof data["sim"] == "undefined") {
+			window.location.href = "https://aprender.digital/";
+		}
+	</script>
+	<div class="wrapper">
+		<div class="image-holder">
+			<img style="display: block; margin-left: auto; margin-right: auto; width:100%" src="images/capa.jpg" alt="" />
+		</div>
+		<form id="formulario" action="">
+			<div id="wizard">
+				<!-- SECTION 1 -->
+				<h4></h4>
+				<section>
+					<p>
+						Olá!!!<br />
+						Este <i>workshop</i> aconteceu no dia 23 de fevereiro... 😟
+						Entretanto, já estamos nos organizando para que ele aconteça <b>novamente</b>. 😊 <br />
+						<b>Preencha</b> os dados abaixo 👇 que já <b>reservaremos</b> uma vaga para você. Assim que a nova data for definida
+						entraremos em contato. Ok? <br />
+						Vai ser muito legal poder contar com a sua participação!!! 👍 
+					</p>
+					<br />
+					<div class="form-row">
+						<b>Nome</b>
+						<input type="nome" id="nome" name="nome" onkeypress="desligaErroNome()" onKeyUp="onKeyUpNome()" required
+							placeholder="digite aqui o seu nome" class="form-control" />
+						<spam id="idMsgAvisoNome" class="msgHideErro">👆 Use no máximo 30 letras. Você pode colocar somente o
+							primeiro nome e o último sobrenome.</spam>
+						<spam id="idMsgErroNome" class="msgHideErro">🙄 Precisamos do seu nome para anotar na ficha de
+							inscrição.</spam>
+						<br />
+						<br />
+						<b>Você leciona para</b><br />
+						<label style="font-weight: normal"><input type="checkbox" id="dele" name="EI" value="EI" />
+							Educação Infantil</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A1" value="A1" />
+							Primeiro ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A2" value="A2" />
+							Segundo ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A3" value="A3" />
+							Terceiro ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A4" value="A4" />
+							Quarto ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="OUTROS" value="OUTROS" />
+							Outros...</label>
+					</div>
+					<spam id="idMsgAvisoSerie" class="msgHideErro">👆 Ei... Escolha uma das opções acima. 😊
+					</spam>
+				</section>
+
+				<!-- SECTION 2 -->
+				<h4></h4>
+				<section>
+					<p>
+						Obrigado pelas informações <spam id="p1-nome1"></spam>! 👍 Só mais
+						duas perguntas... 😊 <br /><br />
+						<b>Você leciona na</b><br />
+						<label style="font-weight: normal"><input type="checkbox" id="dele" name="RPU" onClick="onDele()"
+								value="RPU" />
+							Rede pública</label><br />
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="RPR" onClick="onDela()" value="RPR" />
+							Rede privada</label><br />
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="ROUTROS" onClick="onDela()"
+								value="ROUTROS" />
+							Outras...</label>
+						<spam id="idMsgAvisoRede" class="msgHideErro">👆 Ei... Conta pra nós sobre a sua escola. Escolha uma das
+							opções acima. 😊
+						</spam>
+						<br />
+						<br />
+						Por fim, informe o seu <b>email</b> e <b>WhatsApp</b> para contato
+						sobre o <i>workshop</i>. Há... E não esqueça de incluir o seu <b>DDD!</b> 🌎
+					</p>
+					<br />
+					<div class="form-row">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"
+									aria-hidden="true"></i></span>
+							<input type="email" id="email" name="email" onkeypress="desligaErroEmail()" required
+								placeholder="digite aqui o seu email" class="form-control" />
+						</div>
+						<spam id="idMsgErroEmail" class="msgHideErro">🙄 Precisamos do seu email para enviar a confirmação da
+							inscrição.</spam>
+					</div>
+					<div class="form-row">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+							<input type="phone" id="whats" name="whats" class="form-control" onkeypress="desligaErroWhats()" required
+								placeholder="número do seu WhatsApp com DDD" class="form-control" />
+						</div>
+						<spam id="idMsgErroWhats" class="msgHideErro">🙄 Precisamos do seu WhatsApp para avisos de última hora!
+						</spam>
+					</div>
+				</section>
+
+				<!-- SECTION 3 -->
+				<h4></h4>
+				<section>
+					<p>
+						Muito bom!!! Você já está com a sua vaga reservada no próximo <i>workshop</i>.
+						Enviamos uma confirmação para o seu email
+						<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+						<spam id="p2-artigo1"></spam>
+						<spam id="p2-nome1"></spam>
+						<b>
+							<spam id="p2Email"></spam>
+						</b>.
+					</p>
+					<br />
+					<p>
+						Então, corre para conferir a sua caixa de entrada. 😀 Se o email
+						não chegar nos próximos minutos 🤞, não deixe de verificar se ele
+						não ficou parado na sua <spam style="color: red; font-weight: bold;">caixa de spam</spam>. 👍 <br />
+						É importante que você retire o e-mail do <i>spam</i> para que receba as nossas próximas mensagens.
+					</p>
+				</section>
+			</div>
+		</form>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+	<!-- JQUERY STEP -->
+	<script src="js/jquery.steps.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<!-- Template created and distributed by Colorlib -->
+</body>
+
+</html>
