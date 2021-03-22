@@ -87,6 +87,7 @@ $(function(){
                 xhttp.open("GET", "https://southamerica-east1-instant-vent-304716.cloudfunctions.net/Inscricao?" + query);
                 xhttp.send();
 
+                signLinkeIn();
                 document.getElementById("p2Email").innerHTML = document.getElementById("email").value;
                 
                 return true; 
@@ -174,3 +175,15 @@ function desligaErroEmail() {
 function desligaErroWhats() {
     document.getElementById("idMsgErroWhats").className = "msgHideErro";
 }
+
+function signLinkeIn() {
+ var imgtag = document.createElement('img');
+ imgtag.height = '1';
+ imgtag.width = '1';
+ imgtag.style = 'border-style:none;';
+ imgtag.alt = '';
+ imgtag.src = 'https://px.ads.linkedin.com/collect/?pid=3380193&conversionId=4407769&fmt=gif';
+ 
+ $("#item-content").append(imgtag);
+}
+
