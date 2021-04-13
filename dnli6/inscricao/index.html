@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Inscrição</title>
+	<meta property="og:title" content="Apresentação - Dia Nacional do Livro Infantil">
+	<meta property="og:description" content="Neste evento vamos apresentar uma atividade especial para comemorar o DIA NACIONAL DO LIVRO INFANTIL.">
+	<meta property="og:image" content="https://eventos.aprender.digital/dnli6/images/thumb.jpg">
+	<meta property="og:url" content="https://eventos.aprender.digital/dnli6/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-E956YK3XT4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-E956YK3XT4');
+	</script>
+
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="../fonts/material-design-iconic-font/css/material-design-iconic-font.css" />
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="../css/style.css" />
+
+</head>
+
+<body>
+	<script>
+		var query = location.search.slice(1);
+		var partes = query.split("&");
+		var data = {};
+		partes.forEach(function (parte) {
+			var chaveValor = parte.split("=");
+			var chave = chaveValor[0];
+			var valor = chaveValor[1];
+			data[chave] = valor;
+		});
+		console.log(data);
+		if (typeof data["sim"] == "undefined") {
+			window.location.href = "https://aprender.digital/";
+		}
+	</script>
+	<div class="wrapper">
+		<div class="image-holder">
+			<img style="display: block; margin-left: auto; margin-right: auto; width:100%" src="../images/capa.jpg" alt="" />
+		</div>
+		<form id="formulario" action="">
+			<div id="wizard">
+
+				<!-- SECTION 1 -->
+				<h4></h4>
+				<section>
+					<p>Olá! Vai ser muito bom poder contar com você em nosso evento. 😀
+						<br /><br />
+						Temos uma proposta de atividade muito legal (presencial ou remoto – <b>1º a 3º ano EF</b>) para você fazer com seus alunos e comemorar o <b>DIA NACIONAL DO LIVRO INFANTIL</b>.
+						<br /><br />
+						Nesta sexta-feira, <b>dia 16 de abril</b>, às 20h, teremos um encontro online para apresentar a proposta. 
+						Vamos explicar como a <b>atividade funciona</b> e disponibilizar materiais para que você possa fazê-la com <b>seus alunos</b>. 😍 
+						<br /><br />
+						Se não puder participar do evento ao vivo, <b>se inscreva mesmo assim</b>. Vamos mandar um link com a gravação do evento para você.
+						<br /><br />
+						Para participar, 👇 faça a sua inscrição abaixo: 😊
+					</p>
+					<br />
+					<div class="form-row">
+						<b>Nome</b>
+						<input type="nome" id="nome" name="nome" onkeypress="desligaErroNome()" onKeyUp="onKeyUpNome()" required
+							placeholder="digite aqui o seu nome" class="form-control" />
+						<spam id="idMsgAvisoNome" class="msgHideErro">👆 Use no máximo 30 letras. Você pode colocar somente o
+							primeiro nome e o último sobrenome.</spam>
+						<spam id="idMsgErroNome" class="msgHideErro">🙄 Precisamos do seu nome para anotar na ficha de
+							inscrição.</spam>
+						<br />
+						<br />
+						<b>Você leciona para</b><br />
+						<label style="font-weight: normal"><input type="checkbox" id="dele" name="EI" value="EI" />
+							Educação Infantil</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A1" value="A1" />
+							Primeiro ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A2" value="A2" />
+							Segundo ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A3" value="A3" />
+							Terceiro ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="A4" value="A4" />
+							Quarto ano</label>
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="OUTROS" value="OUTROS" />
+							Outros...</label>
+					</div>
+					<spam id="idMsgAvisoSerie" class="msgHideErro">👆 Ei... Escolha uma das opções acima. 😊
+					</spam>
+				</section>
+
+				<!-- SECTION 2 -->
+				<h4></h4>
+				<section>
+					<p>
+						Obrigado pelas informações <spam id="p1-nome1"></spam>! 👍 Só mais
+						duas perguntas... 😊 <br /><br />
+						<b>Você leciona na</b><br />
+						<label style="font-weight: normal"><input type="checkbox" id="dele" name="RPU" onClick="onDele()"
+								value="RPU" />
+							Rede pública</label><br />
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="RPR" onClick="onDela()" value="RPR" />
+							Rede privada</label><br />
+						<label style="font-weight: normal">
+							<input type="checkbox" class="custom-control-input" id="dela" name="ROUTROS" onClick="onDela()"
+								value="ROUTROS" />
+							Outras...</label>
+						<spam id="idMsgAvisoRede" class="msgHideErro">👆 Ei... Conta pra nós sobre a sua escola. Escolha uma das
+							opções acima. 😊
+						</spam>
+						<br />
+						<br />
+						Por fim, informe o seu <b>email</b> e <b>WhatsApp</b> para contato
+						sobre o <i>workshop</i>. Há... E não esqueça de incluir o seu <spam style="color: red"><b>DDD!</b></spam> 🌎
+					</p>
+					<br />
+					<div class="form-row">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"
+									aria-hidden="true"></i></span>
+							<input type="email" id="email" name="email" onkeypress="desligaErroEmail()" required
+								placeholder="digite aqui o seu email" class="form-control" />
+						</div>
+						<spam id="idMsgErroEmail" class="msgHideErro">🙄 Precisamos do seu email para enviar a confirmação da
+							inscrição.</spam>
+					</div>
+					<div class="form-row">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+							<input type="phone" id="whats" name="whats" class="form-control" onkeypress="desligaErroWhats()" required
+								placeholder="número do seu WhatsApp com DDD" class="form-control" />
+						</div>
+						<spam id="idMsgErroWhats" class="msgHideErro">🙄 Precisamos do seu WhatsApp para avisos de última hora!
+						</spam>
+					</div>
+				</section>
+
+				<!-- SECTION 3 -->
+				<h4></h4>
+				<section>
+					<p>
+						Muito bom!!! Agora estamos trabalhando para gerar a sua incrição.
+						Vamos enviar uma confirmação para o seu email
+						<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+						<spam id="p2-artigo1"></spam>
+						<spam id="p2-nome1"></spam>
+						<b>
+							<spam id="p2Email"></spam>
+						</b>.
+					</p>
+					<br />
+					<p>
+						Então, corre para conferir a sua caixa de entrada. 😀 Se o email
+						não chegar nos próximos minutos 🤞, não deixe de conferir se ele
+						não ficou parado na sua <spam style="color: red; font-weight: bold;">caixa de spam</spam>. 👍
+					</p>
+				</section>
+			</div>
+		</form>
+	</div>
+
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<!-- JQUERY STEP -->
+	<script src="../js/jquery.steps.js"></script>
+	<script src="../js/jquery.validate.min.js"></script>
+
+	<script src="../js/main.js"></script>
+	<!-- Template created and distributed by Colorlib -->
+</body>
+
+</html>
