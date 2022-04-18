@@ -98,7 +98,7 @@ $(function(){
 
         },
         onFinished: function (event, currentIndex) {
-            window.location.href = "/?concluido=";
+            window.location.href = "https://eventos.aprender.digital/dnli7/workshop/";
         },
         labels: {
             finish: "Terminar",
