@@ -1,0 +1,1 @@
+Alterei itens diretamente no CSS. Se for compilar o scss guardar o css atual e depois fazer uma comparação para ver o que foi alterado no css mas não no scss
